@@ -10,12 +10,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+[data-theme='dark'] {
+  color-scheme: dark;
+  color: #f1f5f9;
+  background: #090d16;
+}
+
 * {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body {
@@ -26,6 +33,16 @@ body {
     radial-gradient(circle at top left, rgba(255, 122, 89, 0.12), transparent 28%),
     radial-gradient(circle at top right, rgba(79, 70, 229, 0.09), transparent 24%),
     #f5f7fb;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+[data-theme='dark'] body {
+  background:
+    radial-gradient(circle at top left, rgba(255, 122, 89, 0.14), transparent 30%),
+    radial-gradient(circle at top right, rgba(99, 102, 241, 0.14), transparent 26%),
+    radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.06), transparent 30%),
+    #0a0e1a;
+  color: #f1f5f9;
 }
 
 a {
